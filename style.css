@@ -1,0 +1,528 @@
+/* Reset & base */
+h1, h2, h3{
+  color: #3b82f6;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #3b82f6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* Unified intro background */
+.intro {
+  position: relative;
+  background: #0a0a0a;
+  overflow: hidden;   /* IMPORTANT */
+}
+
+.intro-bg {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(59,130,246,0.25),
+      transparent 30%,
+      transparent 70%,
+      rgba(99,102,241,0.25)
+    ),
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(59,130,246,0.35),
+      transparent 65%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* HERO */
+#hero {
+  min-height: 45vh; /* was 60 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+#hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.4rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  opacity: 0.85;
+}
+
+/* ABOUT */
+#about {
+  position: relative;
+  z-index: 1;
+}
+
+#hero,
+.about-layout {
+  position: relative;
+  z-index: 1;
+}
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 100px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #aaaaaa;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-layout {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+
+/* Section Container */
+#skills-learning {
+  background-color: #0a0a0a;
+  padding: 80px 0;
+  margin-bottom: 0px;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+/* Skills Table Layout */
+
+
+#skills-learning {
+  width: 100%;
+}
+
+.skills-inner {
+  max-width: 1400px;
+  margin: 0 auto; /* ensures horizontal centering */
+  padding: 0 40px;
+}
+
+.skills-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* slightly bigger min */
+  gap: 40px;
+  justify-items: stretch; /* ensures all columns stretch to same width */
+  margin: 0 auto 100px;
+}
+
+.skill-column h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+.skill-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-column li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaaaaa;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+}
+
+.skill-column li img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1) brightness(2); /* inverts black to white and brightens */
+}
+
+.skill-column li:hover img {
+  filter: invert(1.6) brightness(1.3); /* subtle effect on icon */
+}
+
+.skill-column {
+  background-color: #1a1a1a00; /* transparent like projects */
+  padding: 20px;
+  border-radius: 8px;
+  outline: 2px solid rgba(59, 130, 246, 0); /* invisible but exists */
+  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s; /* include outline-color */
+  cursor: default;
+}
+
+
+.skill-column:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  outline-color: rgba(59, 130, 246, 0.7); /* smoothly transitions */
+}
+
+
+
+
+/* Learning / Courses Section */
+.learning-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.learning-block {
+  background-color: transparent; /* no extra color */
+  padding: 20px;                  /* consistent padding */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  outline: 2px solid rgba(59, 130, 246, 0); /* invisible but exists */
+  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s; /* include outline-color */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                      /* spacing between title and paragraph */
+  cursor: default;
+}
+
+.learning-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  outline-color: rgba(59, 130, 246, 0.7); /* smoothly transitions */
+}
+
+.learning-block h4 {
+  display: flex;
+  justify-content: space-between; /* title on left, arrow on right */
+  align-items: flex-end;
+  margin: 0;
+}
+
+
+.learning-block h4 a {
+  display: inline-flex;
+  align-items: flex-end; /* arrow aligns with bottom of text */
+  gap: 6px;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learning-block h4 a::after {
+  margin-left: 4px; /* small spacing */
+  content: "↗";
+  font-size: 1rem;
+  transform: translate(0, 0);
+  transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
+  opacity: 0.8;
+  color: #3b82f6;
+}
+
+.learning-block h4 a:hover {
+  color: #7c3aed;
+}
+
+.learning-block h4 a:hover::after {
+  transform: translate(4px, -4px); /* arrow moves up-right */
+  opacity: 1;
+  color: #7c3aed;
+}
+
+.learning-block p {
+  margin: 0;
+  padding: 0;
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .skills-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-table {
+    grid-template-columns: 1fr; /* stack in single column for mobile */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .learning-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .learning-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Projects */
+#projects {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto; /* horizontal center */
+  padding: 0 20px; /* optional horizontal padding */
+}
+
+.project h1 a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #3b82f6;
+  transition: color 0.3s ease;
+}
+
+.project h2 a::after {
+  content: "↗";
+  font-size: 1.2rem;
+  color: #3b82f6; /* base color */
+  transform: translate(0, 0); /* initial position */
+  transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
+  opacity: 0.8;
+}
+
+.project h2 a:hover::after {
+  transform: translate(4px, -4px); /* moves diagonally up-right */
+  opacity: 1;
+  color: #7c3aed;
+}
+
+.project h2 a:hover {
+  color: #7c3aed;
+}
+
+/* Summary base styling */
+.project-details summary {
+  position: relative;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #3b82f6; /* base link color */
+  transition: color 0.25s ease;
+  list-style: none; /* ensure no default marker */
+}
+
+/* Hide native arrow */
+.project-details summary::-webkit-details-marker {
+  display: none; /* Chrome, Safari, Edge */
+}
+.project-details summary::marker {
+  display: none; /* Firefox */
+}
+
+/* Custom arrow before text */
+.project-details summary::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: bold;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Rotate arrow when details is open */
+.project-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Change color on hover */
+.project-details summary:hover,
+.project-details summary:hover::before {
+  color: #7c3aed; /* purple accent */
+}
+
+.project-details {
+  margin-top: 1rem;
+}
+
+.project h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #3b82f6;
+  margin: 15px 0 10px;
+}
+
+.project p {
+  color: #aaaaaa;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.95rem;
+  color:#aaaaaa;
+  margin-top: 15px;
+  justify-content: center; /* center tech elements under the project */
+}
+
+.tech-stack span {
+  background-color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tech-stack span:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Projects hover effect similar to Learning blocks */
+#projects .project {
+  background-color: #1a1a1a00; /* keep it transparent */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px; /* or 50px if you want more breathing room */
+  transition: transform 0.3s, box-shadow 0.4s, filter 0.3s, background 0.3s;
+}
+
+#projects .project:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  /* glow outline using multiple layered shadows */
+  box-shadow: 
+    0 0 8px rgba(59, 130, 246, 0.6),   /* small sharp glow */
+    0 0 20px rgba(59, 130, 246, 0.4),  /* medium soft glow */
+    0 0 40px rgba(59, 130, 246, 0.2);  /* large faint halo */
+  border: 1px solid rgba(59, 130, 246, 0.6); /* subtle outline */
+  background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(26,26,26,0.8));
+}
+
+
+
+/* Contact / Footer */
+#contact {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+#contact a {
+  margin: 0 15px;
+}
+
+#contact a:hover {
+  color: #3b82f6;
+}
+
+#contact p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+}
