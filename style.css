@@ -176,6 +176,27 @@ img:hover {
   margin-bottom: 60px;
 }
 
+/* Arrow container */
+/* .cta-arrow {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  border-right: 3px solid #3b82f6;
+  border-bottom: 3px solid #3b82f6;
+  transform: rotate(180deg); 
+  transition: transform 0.3s ease;
+}
+
+/* Hover-triggered animation */
+ /* .cta-scroll:hover .cta-arrow {
+  animation: bounceDown 0.6s ease-in-out 1;
+} 
+
+@keyframes bounceDown {
+  0%   { transform: rotate(45deg) translateY(-10); }
+  50%  { transform: rotate(45deg) translateY(10px); } 
+  100% { transform: rotate(45deg) translateY(-10); }   
+}  */
 
 /* Skills Table Layout */
 
@@ -356,7 +377,7 @@ img:hover {
   padding: 0 20px; /* optional horizontal padding */
 }
 
-.project h1 a {
+.project h2 a {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -375,10 +396,11 @@ img:hover {
 }
 
 .project h2 a:hover::after {
-  transform: translate(4px, -4px); /* moves diagonally up-right */
+  transform: translate(4px, -4px); /* arrow moves up-right */
   opacity: 1;
   color: #7c3aed;
 }
+
 
 .project h2 a:hover {
   color: #7c3aed;
