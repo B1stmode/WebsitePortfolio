@@ -1,4 +1,3 @@
-/* Reset & base */
 h1, h2, h3{
   color: #3b82f6;
   font-family: 'Space Grotesk', sans-serif;
@@ -53,11 +52,11 @@ img:hover {
 }
 
 .lang-switcher img {
-  width: 24px;      /* slightly bigger, adjust if needed */
+  width: 24px;
   height: 24px;
   cursor: pointer;
-  border-radius: 50%; /* makes it perfectly circular */
-  object-fit: cover;  /* ensures the flag scales to the circle without distortion */
+  border-radius: 50%;
+  object-fit: cover;
   transition: transform 0.2s, filter 0.2s;
 }
 
@@ -79,7 +78,7 @@ img:hover {
 .intro {
   position: relative;
   background: #0a0a0a;
-  overflow: hidden;   /* IMPORTANT */
+  overflow: hidden; 
 }
 
 .intro-bg {
@@ -102,7 +101,7 @@ img:hover {
 
 /* HERO */
 #hero {
-  min-height: 35vh; /* restored from previous tweaks */
+  min-height: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,27 +126,20 @@ img:hover {
   opacity: 0.85;
 }
 
-@media (max-width: 1920px) and (min-width: 769px) {
-  #hero {
-    padding: 5px 20px;
-  }
-}
-
 /* ABOUT */
 .about-layout {
   display: flex;
   align-items: center;
-  gap: 100px; /* restored original desktop gap */
-  padding: 40px 40px; /* restored desktop padding */
-  max-width: 1400px;
+  gap: 40px;
+  padding: 40px 350px;
   margin: 0 auto;
   position: relative;
 }
 
 .about-text {
   flex: 1;
-  max-width: 700px;
-  font-size: 1.2rem; /* restored original desktop font */
+  max-width: 750px;
+  font-size: 1.35rem;
   line-height: 1.6;
   color: #aaaaaa;
 }
@@ -164,7 +156,7 @@ img:hover {
 
 .about-image img {
   width: 100%;
-  max-width: 420px; /* restored original size */
+  max-width: 420px;
 }
 /* Section Titles */
 .section-title {
@@ -180,7 +172,7 @@ img:hover {
 .cta-scroll {
   width: 100%;
   text-align: center;
-  margin: 40px 0 60px; /* original spacing for big screens */
+  margin: 40px 0 60px;
 }
 
 .cta-scroll p {
@@ -201,7 +193,7 @@ img:hover {
   height: 24px;
   border-right: 3px solid #3b82f6;
   border-bottom: 3px solid #3b82f6;
-  transform: rotate(45deg); /* points down */
+  transform: rotate(45deg);
   display: inline-block;
   opacity: 0.8;
   transition: opacity 0.25s ease;
@@ -217,29 +209,34 @@ img:hover {
   100% { transform: translateY(0); }
 }
 
-/* Medium screens: laptops / smaller desktops */
+/* Medium screens: laptops */
 @media (max-width: 1920px) and (min-width: 769px) {
   .about-layout {
-    flex-direction: row;      /* keep text and image side by side */
-    gap: 40px;                /* smaller than full desktop, but not tiny */
-    padding: 0px 80px;       /* decent horizontal padding */
+    flex-direction: row;
+    gap: 40px;
+    padding: 0px 80px;
   }
 
   .about-text {
-    flex: 2;                  /* let text take ~2/3 of space */
-    font-size: 1rem;        /* slightly smaller than desktop */
-    line-height: 1.25;         /* slightly tighter to fit paragraphs */
+    flex: 2;
+    font-size: 1rem;
+    line-height: 1.25;
   }
 
   .about-image {
-    flex: 1;                  /* image takes ~1/3 */
+    flex: 1;
     display: flex;
     justify-content: center;
   }
 
   .about-image img {
-    max-width: 305px;         /* slightly smaller than desktop */
+    max-width: 305px;
   }
+
+  #hero {
+    padding: 5px 20px;
+  }
+
   .cta-scroll{
     margin: 0px 0 60px;
   }
@@ -249,14 +246,14 @@ img:hover {
   height: 12px;
   border-right: 3px solid #3b82f6;
   border-bottom: 3px solid #3b82f6;
-  transform: rotate(45deg); /* points down */
+  transform: rotate(45deg);
   display: inline-block;
   opacity: 0.8;
   transition: opacity 0.25s ease;
 }
 }
 
-/* Responsive adjustments for small screens */
+/*Small screens */
 @media (max-width: 768px) {
   .about-layout {
     flex-direction: column;      /* stack image above text */
@@ -283,15 +280,15 @@ img:hover {
 
 .skills-inner {
   max-width: 1400px;
-  margin: 0 auto; /* ensures horizontal centering */
+  margin: 0 auto;
   padding: 0 40px;
 }
 
 .skills-table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* slightly bigger min */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  justify-items: stretch; /* ensures all columns stretch to same width */
+  justify-items: stretch;
   margin: 0 auto 100px;
 }
 
@@ -320,19 +317,19 @@ img:hover {
 .skill-column li img {
   width: 24px;
   height: 24px;
-  filter: invert(1) brightness(2); /* inverts black to white and brightens */
+  filter: invert(1) brightness(2);
 }
 
 .skill-column li:hover img {
-  filter: invert(1.6) brightness(1.3); /* subtle effect on icon */
+  filter: invert(1.6) brightness(1.3);
 }
 
 .skill-column {
-  background-color: #1a1a1a00; /* transparent like projects */
+  background-color: #1a1a1a00;
   padding: 20px;
   border-radius: 8px;
-  outline: 2px solid rgba(59, 130, 246, 0); /* invisible but exists */
-  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s; /* include outline-color */
+  outline: 2px solid rgba(59, 130, 246, 0);
+  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s;
   cursor: default;
 }
 
@@ -340,11 +337,8 @@ img:hover {
 .skill-column:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-  outline-color: rgba(59, 130, 246, 0.7); /* smoothly transitions */
+  outline-color: rgba(59, 130, 246, 0.7);
 }
-
-
-
 
 /* Learning / Courses Section */
 .learning-section {
@@ -356,27 +350,27 @@ img:hover {
 }
 
 .learning-block {
-  background-color: transparent; /* no extra color */
-  padding: 20px;                  /* consistent padding */
+  background-color: transparent;
+  padding: 20px;
   border-radius: 8px;
   border: 2px solid transparent;
-  outline: 2px solid rgba(59, 130, 246, 0); /* invisible but exists */
-  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s; /* include outline-color */
+  outline: 2px solid rgba(59, 130, 246, 0);
+  transition: transform 0.3s, box-shadow 0.3s, outline-color 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 10px;                      /* spacing between title and paragraph */
+  gap: 10px;
   cursor: default;
 }
 
 .learning-block:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-  outline-color: rgba(59, 130, 246, 0.7); /* smoothly transitions */
+  outline-color: rgba(59, 130, 246, 0.7);
 }
 
 .learning-block h4 {
   display: flex;
-  justify-content: space-between; /* title on left, arrow on right */
+  justify-content: space-between;
   align-items: flex-end;
   margin: 0;
 }
@@ -384,7 +378,7 @@ img:hover {
 
 .learning-block h4 a {
   display: inline-flex;
-  align-items: flex-end; /* arrow aligns with bottom of text */
+  align-items: flex-end;
   gap: 6px;
   color: #3b82f6;
   text-decoration: none;
@@ -392,7 +386,7 @@ img:hover {
 }
 
 .learning-block h4 a::after {
-  margin-left: 4px; /* small spacing */
+  margin-left: 4px;
   content: "↗";
   font-size: 1rem;
   transform: translate(0, 0);
@@ -406,7 +400,7 @@ img:hover {
 }
 
 .learning-block h4 a:hover::after {
-  transform: translate(4px, -4px); /* arrow moves up-right */
+  transform: translate(4px, -4px);
   opacity: 1;
   color: #7c3aed;
 }
@@ -444,7 +438,7 @@ img:hover {
 
 @media (max-width: 768px) {
   .skills-table {
-    grid-template-columns: 1fr; /* stack in single column for mobile */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -465,8 +459,8 @@ img:hover {
 #projects {
   width: 90%;
   max-width: 1400px;
-  margin: 0 auto; /* horizontal center */
-  padding: 0 20px; /* optional horizontal padding */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .project h2 a {
@@ -481,14 +475,14 @@ img:hover {
 .project h2 a::after {
   content: "↗";
   font-size: 1.2rem;
-  color: #3b82f6; /* base color */
-  transform: translate(0, 0); /* initial position */
+  color: #3b82f6;
+  transform: translate(0, 0);
   transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
   opacity: 0.8;
 }
 
 .project h2 a:hover::after {
-  transform: translate(4px, -4px); /* arrow moves up-right */
+  transform: translate(4px, -4px);
   opacity: 1;
   color: #7c3aed;
 }
@@ -504,17 +498,17 @@ img:hover {
   cursor: pointer;
   margin-top: 1rem;
   font-weight: 500;
-  color: #3b82f6; /* base link color */
+  color: #3b82f6;
   transition: color 0.25s ease;
-  list-style: none; /* ensure no default marker */
+  list-style: none;
 }
 
 /* Hide native arrow */
 .project-details summary::-webkit-details-marker {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
 }
 .project-details summary::marker {
-  display: none; /* Firefox */
+  display: none;
 }
 
 /* Custom arrow before text */
@@ -536,7 +530,7 @@ img:hover {
 /* Change color on hover */
 .project-details summary:hover,
 .project-details summary:hover::before {
-  color: #7c3aed; /* purple accent */
+  color: #7c3aed;
 }
 
 .project-details {
@@ -564,7 +558,7 @@ img:hover {
   font-size: 0.95rem;
   color:#aaaaaa;
   margin-top: 15px;
-  justify-content: center; /* center tech elements under the project */
+  justify-content: center;
 }
 
 .tech-stack span {
@@ -581,22 +575,21 @@ img:hover {
 
 /* Projects hover effect similar to Learning blocks */
 #projects .project {
-  background-color: #1a1a1a00; /* keep it transparent */
+  background-color: #1a1a1a00;
   padding: 20px;
   border-radius: 8px;
-  margin-bottom: 40px; /* or 50px if you want more breathing room */
+  margin-bottom: 40px;
   transition: transform 0.3s, box-shadow 0.4s, filter 0.3s, background 0.3s;
 }
 
 #projects .project:hover {
   transform: translateY(-3px);
   filter: brightness(1.08);
-  /* glow outline using multiple layered shadows */
   box-shadow: 
-    0 0 8px rgba(59, 130, 246, 0.6),   /* small sharp glow */
-    0 0 20px rgba(59, 130, 246, 0.4),  /* medium soft glow */
-    0 0 40px rgba(59, 130, 246, 0.2);  /* large faint halo */
-  border: 1px solid rgba(59, 130, 246, 0.6); /* subtle outline */
+    0 0 8px rgba(59, 130, 246, 0.6),
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 40px rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.6);
   background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(26,26,26,0.8));
 }
 
