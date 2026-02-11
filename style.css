@@ -130,18 +130,18 @@ img:hover {
 .about-layout {
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 40px 350px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  position: relative;
+  padding: 40px;
+  gap: 60px;
 }
 
 .about-text {
   flex: 1;
-  max-width: 750px;
+  min-width: 520px;
   font-size: 1.35rem;
   line-height: 1.6;
-  color: #aaaaaa;
 }
 
 .about-text p {
@@ -149,14 +149,14 @@ img:hover {
 }
 
 .about-image {
-  flex: 1;
+  flex: 0 0  auto;
   display: flex;
   justify-content: center;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
 }
 /* Section Titles */
 .section-title {
@@ -209,7 +209,6 @@ img:hover {
   100% { transform: translateY(0); }
 }
 
-/* Medium screens: laptops */
 @media (max-width: 1920px) and (min-width: 769px) {
   .about-layout {
     flex-direction: row;
@@ -254,7 +253,7 @@ img:hover {
 }
 
 /*Small screens */
-@media (max-width: 768px) {
+@media (max-width: 1060px) {
   .about-layout {
     flex-direction: column;      /* stack image above text */
     gap: 20px;                   /* smaller spacing for mobile */
