@@ -139,7 +139,7 @@ img:hover {
 
 .about-text {
   flex: 1;
-  min-width: 520px;
+  min-width: 0;
   font-size: 1.35rem;
   line-height: 1.6;
 }
@@ -209,7 +209,7 @@ img:hover {
   100% { transform: translateY(0); }
 }
 
-@media (max-width: 1920px) and (min-width: 769px) {
+@media (max-width: 1920px) and (min-width: 1060px) {
   .about-layout {
     flex-direction: row;
     gap: 40px;
@@ -255,24 +255,27 @@ img:hover {
 /*Small screens */
 @media (max-width: 1060px) {
   .about-layout {
-    flex-direction: column;      /* stack image above text */
-    gap: 20px;                   /* smaller spacing for mobile */
-    padding: 20px 15px;          /* reduce side padding */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5vw;
+    max-width: 100%;
   }
 
   .about-text {
-    max-width: 100%;             /* allow text to use full width */
-    font-size: 1rem;             /* slightly smaller font for small screens */
-    text-align: center;           /* optional: center text for better mobile look */
+    max-width: none;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
   }
 
   .about-image {
-    order: -1;                   /* ensures image comes first */
+    order: -1;
     width: 100%;
   }
 
   .about-image img {
-    max-width: 90%;              /* keep some margin from sides */
+    max-width: 90%;
     margin: 0 auto;
   }
 }
