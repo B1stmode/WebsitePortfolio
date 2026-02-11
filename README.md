@@ -16,15 +16,13 @@ This website serves as a central hub for my work, demonstrating frontend develop
 - Responsive layout for desktop, laptop, and mobile screens  
 - "About Me" section with adaptive text and image placement  
 - Interactive project links with animated arrows  
-- Skills and learning sections styled with hover effects  
-- Smooth scroll and anchored navigation  
+- Skills and learning sections styled with hover effects    
 - Lightweight, framework-free implementation  
 
 ---
 
 ## 🧠 What I Learned
 - Responsive design with Flexbox and media queries  
-- DOM manipulation for interactive UI elements  
 - Maintaining readable layout across multiple screen sizes  
 - Styling consistent, accessible components using only HTML, CSS, and JS  
 
