@@ -31,7 +31,6 @@ This website serves as a central hub for my work, demonstrating frontend develop
 ## Tech Stack
 - HTML5  
 - CSS3  
-- Vanilla JavaScript  
 - GitHub Pages (hosting)  
 
 ---
