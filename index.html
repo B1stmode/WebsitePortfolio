@@ -274,57 +274,78 @@
       <span class="project-badge project-badge--date">May 2026</span>
       <div class="project-inner">
         <div class="project-image">
-          <img src="GearUP_Banner_Fix.png" alt="GearUp app screenshot">
+          <img src="GearUP_Banner_Fixed.png" alt="GearUp app screenshot">
         </div>
         <div class="project-content">
-          <h2>GearUp: Your digital armory</h2>
-          <p>Personal gear management app built with AI assistance.</p>
-          <p>
-            A mobile-first Progressive Web App for managing airsoft gear, generating mission loadouts,
-            and tracking equipment across devices. Built to match the visual identity of my airsoft
-            team, RAT PMC — dark monochrome aesthetic, installable on phone and desktop, works fully offline.
-          </p>
-          <div class="tech-stack">
-            <span>Claude Cowork</span>
-            <span>JS</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>GitHub</span>
-            <span>Cloudflare</span>
-            <span>Supabase</span>
-          </div>
-        </div>
-      </div>
-      <details class="project-details">
-        <summary>Read more about the project and development</summary>
-        <p>
-          Designed and directed by me, code written with AI assistance.
-          <strong>All feature decisions, UX design, and product direction are my own.</strong>
-        </p>
-        <h2>Project Direction</h2>
-        <ul>
-          <li>Built to solve a real personal need — managing gear and equipment for airsoft</li>
-          <li>Intentionally no frameworks — raw files, zero build step, easy to maintain</li>
-        </ul>
-        <h2>Technical Overview</h2>
-        <ul>
-          <li><strong>Type:</strong> Progressive Web App (PWA) — installable, works offline</li>
-          <li><strong>Frontend:</strong> Vanilla JS, HTML, CSS — no frameworks</li>
-          <li><strong>Storage:</strong> IndexedDB (local) + Supabase PostgreSQL (cloud sync)</li>
-          <li><strong>Auth:</strong> Cloudflare Access (magic-link gate before any file loads)</li>
-          <li>Loadout generator with scoring algorithm (season + purpose + condition weighting)</li>
-          <li>6 ownership statuses — owned, borrowed, lent out, on sale, wishlist, sold</li>
-          <li>Excel and JSON import/export with auto column detection and duplicate merging</li>
-          <li>Stats page with Chart.js charts — type, condition, season, purpose breakdowns</li>
-          <li>CZK / EUR currency toggle with live price conversion across all items</li>
-        </ul>
-        <h2>Current State</h2>
-        <ul>
-          <li>Fully functional and in personal daily use</li>
-          <li>Cross-device sync working via Supabase with JWT auth and auto token refresh</li>
-          <li>Deployed on Cloudflare Pages, private access via Cloudflare Access</li>
-        </ul>
-      </details>
+  <h2>GearUp: Your Operational Readiness</h2>
+
+  <p>
+    Operational management platform for airsoft and milsim environments.
+  </p>
+
+  <p>
+    A mobile-first Progressive Web App designed for managing equipment,
+    preparing loadouts, organizing operations, and tracking gear across devices.
+  </p>
+    <p>
+    Designed and directed by me, with implementation developed through AI-assisted workflow.
+    <strong>
+      System architecture decisions, UX design, feature planning, workflow logic,
+      and product direction are my own.
+    </strong>
+  </p>
+
+  <div class="tech-stack">
+    <span>Claude Cowork</span>
+    <span>JavaScript</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>IndexedDB</span>
+    <span>Cloudflare</span>
+    <span>Supabase</span>
+  </div>
+</div>
+</div>
+
+<details class="project-details">
+  <summary>Read more about the project and development</summary>
+
+  <h2>Project Direction</h2>
+  <ul>
+    GearUp combines armory management and operational planning into one connected
+    system built around real field workflow needs — offline-first, installable on
+    phone and desktop
+    <li>Built to solve real operational and equipment-management problems within airsoft and milsim environments</li>
+    <li>Evolved from a simple inventory tracker into a broader operations and preparation platform</li>
+    <li>Focused on practical workflow, low friction, and field usability instead of feature bloat</li>
+    <li>Armory and Operations Center systems are interconnected and designed to support each other</li>
+    <li>Built intentionally without frontend frameworks — lightweight structure, no build complexity, easy long-term maintenance</li>
+  </ul>
+
+  <h2>Technical Overview</h2>
+  <ul>
+    <li><strong>Type:</strong> Progressive Web App (PWA) — installable, offline-capable, mobile-first</li>
+    <li><strong>Frontend:</strong> Vanilla JavaScript, HTML, CSS</li>
+    <li><strong>Storage:</strong> IndexedDB for local-first storage + Supabase PostgreSQL for cloud sync</li>
+    <li><strong>Authentication:</strong> Cloudflare Access protected deployment with account mapping based on authenticated email</li>
+    <li><strong>Operations Center:</strong> Briefings, objectives, ROE, notes, interactive maps, operational checklists, and field-focused planning tools</li>
+    <li><strong>Loadout System:</strong> Automated loadout generation based on season, role, and equipment condition</li>
+    <li><strong>Inventory System:</strong> Ownership tracking, lending/borrowing, maintenance intervals, ammunition tracking, and operational status management</li>
+    <li><strong>Automation:</strong> Operation-linked loadouts, automatic checklist generation, maintenance reminders, operation history logging, and usage tracking</li>
+    <li><strong>Import / Export:</strong> Excel and JSON support with duplicate detection and bulk import handling</li>
+    <li><strong>Statistics:</strong> Chart.js visualizations for gear usage, categories, conditions, and operational history</li>
+    <li><strong>Currency System:</strong> CZK / EUR support with live conversion across stored inventory values</li>
+  </ul>
+
+  <h2>Current State</h2>
+  <ul>
+    <li>Fully functional and in active personal use</li>
+    <li>Cross-device synchronization working through Supabase with automatic session handling</li>
+    <li>Offline-first architecture with local persistence and queued sync behavior</li>
+    <li>Private deployment hosted on Cloudflare Pages behind Cloudflare Access / Zero Trust protection</li>
+    <li>Currently expanding toward broader operational planning and long-term equipment lifecycle tracking</li>
+  </ul>
+</details>
     </div>
 
     <!-- Project 3 -->

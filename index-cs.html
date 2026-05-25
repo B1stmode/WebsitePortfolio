@@ -109,7 +109,8 @@
                   CSS
                 </li>
                 <li>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg" alt="JavaScript Logo">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/javascript.svg"
+                    alt="JavaScript Logo">
                   JS
                 </li>
               </ul>
@@ -147,7 +148,8 @@
                   GitHub Copilot
                 </li>
                 <li>
-                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg" alt="Claude Code Logo">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg"
+                    alt="Claude Code Logo">
                   Claude Code
                 </li>
               </ul>
@@ -205,7 +207,8 @@
 
         <div class="learning-block">
           <h4><a href="https://anthropic.skilljar.com/" target="_blank">Anthropic Courses</a></h4>
-          <p>Absolvováno: Claude 101, Introduction to Claude Cowork a Claude Code 101 — základy AI, prompt engineering a tvorba s Claude Code.</p>
+          <p>Absolvováno: Claude 101, Introduction to Claude Cowork a Claude Code 101 — základy AI, prompt engineering a
+            tvorba s Claude Code.</p>
         </div>
       </div>
 
@@ -247,15 +250,18 @@
           <summary>Více o projektu a vývoji</summary>
           <h2>Záměr projektu</h2>
           <ul>
-            <li>Vznikl z reálné osobní frustrace — žádný nativní způsob, jak vidět limity Claude Code přímo ve VS Code</li>
+            <li>Vznikl z reálné osobní frustrace — žádný nativní způsob, jak vidět limity Claude Code přímo ve VS Code
+            </li>
             <li>Záměrně minimalistické — jedno JS rozšíření, žádný build step</li>
           </ul>
           <h2>Technický přehled</h2>
           <ul>
             <li><strong>Typ:</strong> Rozšíření pro VS Code — publikováno na VS Code Marketplace</li>
             <li><strong>Jazyk:</strong> Vanilla JavaScript, VS Code Extension API</li>
-            <li><strong>Auth:</strong> Čte OAuth přihlašovací údaje z <code>~/.claude/.credentials.json</code> vygenerované Claude Code</li>
-            <li>Dotazuje <code>api.anthropic.com/api/oauth/usage</code> každých 5 minut (endpoint objevený komunitou)</li>
+            <li><strong>Auth:</strong> Čte OAuth přihlašovací údaje z <code>~/.claude/.credentials.json</code>
+              vygenerované Claude Code</li>
+            <li>Dotazuje <code>api.anthropic.com/api/oauth/usage</code> každých 5 minut (endpoint objevený komunitou)
+            </li>
             <li>Barevně označený stavový řádek — šedá / žlutá / červená podle procenta využití</li>
             <li>Tooltip při najetí zobrazuje kvóty relace i týdne, odpočty do resetu a čas posledního načtení</li>
             <li>Žádná data se neshromažďují — pouze jeden dotaz na servery Anthropic pomocí vlastního tokenu</li>
@@ -274,56 +280,89 @@
         <span class="project-badge project-badge--date">Květen 2026</span>
         <div class="project-inner">
           <div class="project-image">
-            <img src="GearUP_Banner_Fix.png" alt="Snímek aplikace GearUp">
+            <img src="GearUP_Banner_Fixed.png" alt="Snímek aplikace GearUp">
           </div>
           <div class="project-content">
-            <h2>GearUp: Your digital armory</h2>
-            <p>Aplikace pro správu vybavení vytvořená s pomocí AI.</p>
+            <h2>GearUp: Your Operational Readiness</h2>
+
             <p>
-              Mobilní Progressive Web App (PWA) pro správu airsoft vybavení, generování loadoutů na mise
-              a sledování gearu přes více zařízení. Navržena v souladu s vizuální identitou mého
-              airsoft týmu RAT PMC — tmavá monochromatická estetika, instalovatelná na telefon
-              i počítač, funguje plně offline.
+              Platforma pro správu vybavení a operační přípravu pro airsoft a milsim akcích.
             </p>
+
+            <p>
+              Mobile-first Progressive Web App navržená pro správu vybavení,
+              přípravu loadoutů, organizaci operací a sledování výstroje napříč zařízeními.
+            </p>
+
+            <p>
+              Navrženo a vedeno mnou, implementace vytvořena pomocí AI-assisted workflow.
+              <strong>
+                Architektura systému, UX design, plánování funkcí,
+                workflow logika a celkové směřování projektu jsou moje vlastní rozhodnutí.
+              </strong>
+            </p>
+
             <div class="tech-stack">
               <span>Claude Cowork</span>
-              <span>JS</span>
+              <span>JavaScript</span>
               <span>HTML</span>
               <span>CSS</span>
-              <span>GitHub</span>
+              <span>IndexedDB</span>
               <span>Cloudflare</span>
               <span>Supabase</span>
             </div>
           </div>
         </div>
+
         <details class="project-details">
-          <summary>Více o projektu a vývoji</summary>
-          <p>
-            Navrženo a řízeno mnou, kód napsán s pomocí AI.
-            <strong>Všechna rozhodnutí o funkcích, UX design a produktová vize jsou moje vlastní.</strong>
-          </p>
-          <h2>Záměr projektu</h2>
+          <summary>Přečíst více o projektu a vývoji</summary>
+
+          <h2>Směr projektu</h2>
           <ul>
-            <li>Vznikla z reálné osobní potřeby — správa gearu a vybavení pro airsoft</li>
-            <li>Záměrně bez frameworků — čisté soubory, snadná údržba</li>
+            GearUp propojuje správu výstroje a operační plánování do jednoho propojeného systému
+            postaveného kolem reálných potřeb při přípravě na akce a používání v terénu —
+            offline-first, instalovatelný na telefon i desktop
+            <li>Vytvořeno pro řešení reálných problémů se správou vybavení a operační přípravou v airsoft a milsim
+              akcích</li>
+            <li>Projekt se postupně vyvinul z jednoduchého inventory trackeru do širší platformy pro operace a přípravu
+            </li>
+            <li>Zaměřeno na praktický workflow, nízkou míru zbytečných kroků a použitelnost v terénu místo zbytečného
+              feature bloatu</li>
+            <li>Systémy Armory a Operations Center jsou vzájemně propojené a navržené tak, aby se doplňovaly</li>
+            <li>Záměrně vytvořeno bez frontend frameworků — lehká struktura, žádná build komplexita, jednodušší
+              dlouhodobá údržba</li>
           </ul>
+
           <h2>Technický přehled</h2>
           <ul>
-            <li><strong>Typ:</strong> Progressive Web App (PWA) — instalovatelná, funguje offline</li>
-            <li><strong>Frontend:</strong> Vanilla JS, HTML, CSS — bez frameworků</li>
-            <li><strong>Úložiště:</strong> IndexedDB (lokálně) + Supabase PostgreSQL (cloud sync)</li>
-            <li><strong>Auth:</strong> Cloudflare Access (ověření před načtením jakéhokoli souboru)</li>
-            <li>Generátor loadoutů se skórovacím algoritmem (váha sezóny, účelu a stavu vybavení)</li>
-            <li>6 stavů vlastnictví — vlastní, zapůjčené, půjčené (někomu), na prodej, wishlist, prodáno</li>
-            <li>Import/export Excel a JSON s automatickým rozpoznáváním sloupců a slučováním duplicit</li>
-            <li>Stránka statistik s Chart.js grafy — typ, stav, sezóna, účel</li>
-            <li>Přepínač měny CZK / EUR s převodem cen napříč všemi předměty</li>
+            <li><strong>Typ:</strong> Progressive Web App (PWA) — instalovatelná, offline-capable, mobile-first</li>
+            <li><strong>Frontend:</strong> Vanilla JavaScript, HTML, CSS</li>
+            <li><strong>Úložiště:</strong> IndexedDB pro local-first ukládání + Supabase PostgreSQL pro cloud
+              synchronizaci</li>
+            <li><strong>Autentizace:</strong> Cloudflare Access chráněné nasazení s mapováním účtu podle ověřeného
+              emailu</li>
+            <li><strong>Operations Center:</strong> Briefingy, cíle, ROE, poznámky, interaktivní mapy, operační
+              checklisty a nástroje zaměřené na použití v terénu</li>
+            <li><strong>Loadout systém:</strong> Automatické generování loadoutů podle sezóny, role a stavu vybavení
+            </li>
+            <li><strong>Inventory systém:</strong> Sledování vlastnictví, půjčování vybavení, intervaly údržby,
+              sledování munice a operačního stavu vybavení</li>
+            <li><strong>Automatizace:</strong> Propojení operací s loadouty, automatické checklisty, upozornění na
+              údržbu, historie operací a tracking používání vybavení</li>
+            <li><strong>Import / Export:</strong> Podpora Excel a JSON souborů s detekcí duplicit a bulk importem</li>
+            <li><strong>Statistiky:</strong> Chart.js grafy pro využití vybavení, kategorie, stav a operační historii
+            </li>
+            <li><strong>Měnový systém:</strong> Podpora CZK / EUR s live přepočtem hodnot vybavení</li>
           </ul>
+
           <h2>Aktuální stav</h2>
           <ul>
-            <li>Plně funkční, v denním osobním použití</li>
-            <li>Sync mezi zařízeními přes Supabase s JWT authentication a automatickým obnovením tokenů</li>
-            <li>Nasazena na Cloudflare Pages, soukromý přístup přes Cloudflare Access</li>
+            <li>Plně funkční a aktivně používané v osobním provozu</li>
+            <li>Cross-device synchronizace fungující přes Supabase s automatickou správou sessions</li>
+            <li>Offline-first architektura s lokálním ukládáním a queued sync chováním</li>
+            <li>Privátní nasazení hostované na Cloudflare Pages za Cloudflare Access / Zero Trust ochranou</li>
+            <li>Projekt se dále rozšiřuje směrem k širšímu operačnímu plánování a dlouhodobému lifecycle trackingu
+              vybavení</li>
           </ul>
         </details>
       </div>
@@ -476,7 +515,8 @@
         <details class="project-details">
           <summary>Detaily vývoje</summary>
           <h2>Směr projektu</h2>
-          <p>Malý webový projekt zaměřený na základy JavaScriptu, interakci s uživatelem a dynamické aktualizace DOM.</p>
+          <p>Malý webový projekt zaměřený na základy JavaScriptu, interakci s uživatelem a dynamické aktualizace DOM.
+          </p>
           <h2>Technický přehled</h2>
           <ul>
             <li><strong>Jazyky:</strong> HTML, CSS, JavaScript</li>
