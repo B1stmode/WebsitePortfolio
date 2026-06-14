@@ -207,11 +207,88 @@
         <p>Completed: Claude 101, Introduction to Claude Cowork, and Claude Code 101 — covering AI fundamentals, prompt engineering, and building with Claude Code.</p>
       </div>
     </div>
-    </div>
-    <!--Project 1-->
 
+    <h3 class="projects-subheading">Featured Projects</h3>
+
+    <!-- STANDBY -->
     <div class="project project--featured">
-      <span class="project-badge">Latest</span>
+      <span class="project-badge project-badge--date">June 2026</span>
+            <span class="project-badge">Latest</span>
+      <div class="project-inner">
+        <div class="project-image">
+          <img src="GearUP_Banner_Fixed.png" alt="STANDBY: Your Range Tool">
+        </div>
+        <div class="project-content">
+          <h2>STANDBY: Your Range Tool</h2>
+          <p>Shot timer and training companion for airsoft and range training.</p>
+          <p>
+            A mobile-first Progressive Web App built for use on the range, during the drill,
+            in the moment — timer, drill library, and training log in a single offline-capable tool.
+            Designed and directed by me, with implementation developed through AI-assisted workflow.
+          </p>
+          <div class="tech-stack">
+            <span>Claude Code</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>IndexedDB</span>
+            <span>Cloudflare</span>
+          </div>
+        </div>
+      </div>
+      <details class="project-details">
+        <summary>Key Features</summary>
+        <ul>
+          <li>Offline-first PWA — installable on phone and desktop, no account required</li>
+          <li>Audio-based shot detection — microphone automatically stops the timer on confirmed shots</li>
+          <li>Drill library with built-in classics (El Presidente, Bill Drill, Mozambique) and custom drill builder</li>
+          <li>Calibration system — measures ambient noise floor and shot peaks to suggest your threshold</li>
+          <li>Training log — notebook-style range entries with splits, scores, and improvement notes</li>
+          <li>Field Mode for outdoor readability in direct sunlight</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- GearUp -->
+    <div class="project project--featured">
+      <span class="project-badge project-badge--date">May 2026</span>
+      <div class="project-inner">
+        <div class="project-image">
+          <img src="GearUP_Banner_Fixed.png" alt="GearUp app screenshot">
+        </div>
+        <div class="project-content">
+          <h2>GearUp: Your Operational Readiness</h2>
+          <p>Operational management platform for airsoft and milsim environments.</p>
+          <p>
+            A mobile-first Progressive Web App designed for managing equipment,
+            preparing loadouts, organizing operations, and tracking gear across devices.
+            Designed and directed by me, with implementation developed through AI-assisted workflow.
+          </p>
+          <div class="tech-stack">
+            <span>Claude Cowork</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>IndexedDB</span>
+            <span>Cloudflare</span>
+            <span>Supabase</span>
+          </div>
+        </div>
+      </div>
+      <details class="project-details">
+        <summary>Key Features</summary>
+        <ul>
+          <li>Offline-first PWA — installable on phone and desktop</li>
+          <li>Armory system: ownership, lending, maintenance intervals, ammunition tracking</li>
+          <li>Operations Center: briefings, objectives, maps, checklists, field tools</li>
+          <li>Automated loadout generation by season, role, and equipment condition</li>
+          <li>Cross-device sync via Supabase with local IndexedDB persistence</li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Claude Meter -->
+    <div class="project project--featured">
       <span class="project-badge project-badge--date">May 2026</span>
       <div class="project-inner">
         <div class="project-image">
@@ -225,12 +302,9 @@
           </h2>
           <p>Claude Code usage limits, always visible.</p>
           <p>
-            A VS Code extension that displays your Claude Code usage limits (5-hour session and weekly)
+            A VS Code extension that displays your Claude Code usage limits (5-hour session and weekly session)
             as a permanent status bar item — always visible, no commands needed.
-          </p>
-          <p>
             Designed and directed by me, code written with AI assistance.
-            <strong>All feature decisions, limits access, and product direction are my own.</strong>
           </p>
           <div class="tech-stack">
             <span>Claude Code</span>
@@ -243,280 +317,142 @@
         </div>
       </div>
       <details class="project-details">
-        <summary>Read more about the project and development</summary>
-        <h2>Project Direction</h2>
+        <summary>Key Features</summary>
         <ul>
-          <li>Built to solve a real personal frustration — no native way to see Claude Code usage limits inside VS Code</li>
-          <li>Intentionally lightweight — a single JS extension</li>
+          <li>Permanent VS Code status bar item — always visible, no commands needed</li>
+          <li>Tracks both 5-hour session and weekly Claude Code usage limits</li>
+          <li>Color-coded bar: neutral / yellow / red by usage percentage</li>
+          <li>Hover tooltip shows quotas, reset countdowns, and last fetch time</li>
+          <li>No data collected — single request to Anthropic servers using your own token</li>
         </ul>
-        <h2>Technical Overview</h2>
-        <ul>
-          <li><strong>Type:</strong> VS Code Extension — published on the VS Code Marketplace</li>
-          <li><strong>Language:</strong> Vanilla JavaScript, VS Code Extension API</li>
-          <li><strong>Auth:</strong> Reads OAuth credentials from <code>~/.claude/.credentials.json</code> generated by Claude Code</li>
-          <li>Polls <code>api.anthropic.com/api/oauth/usage</code> every 5 minutes (community-discovered endpoint)</li>
-          <li>Color-coded status bar — gray (vs code background) / yellow / red based on usage percentage thresholds</li>
-          <li>Hover tooltip shows session + weekly quotas, reset countdowns, and last fetch time</li>
-          <li>No data collected — only a single request to Anthropic's own servers using your own token</li>
-        </ul>
-        <h2>Current State</h2>
-        <ul>
-          <li>Live on the VS Code Marketplace and in active personal use</li>
-          <li>Works automatically on VS Code startup with no configuration needed</li>
-          <li>Relies on an undocumented API endpoint — may break if Anthropic changes it</li>
-        </ul>
+        <p><a href="https://github.com/B1stmode/claude-meter" target="_blank">GitHub</a></p>
       </details>
     </div>
 
-    <!--Project 2-->
+    <h3 class="projects-subheading">Other Projects</h3>
+    <div class="projects-grid">
 
-    <div class="project">
-      <span class="project-badge project-badge--date">May 2026</span>
-      <div class="project-inner">
-        <div class="project-image">
-          <img src="GearUP_Banner_Fixed.png" alt="GearUp app screenshot">
-        </div>
-        <div class="project-content">
-  <h2>GearUp: Your Operational Readiness</h2>
-
-  <p>
-    Operational management platform for airsoft and milsim environments.
-  </p>
-
-  <p>
-    A mobile-first Progressive Web App designed for managing equipment,
-    preparing loadouts, organizing operations, and tracking gear across devices.
-  </p>
-    <p>
-    Designed and directed by me, with implementation developed through AI-assisted workflow.
-    <strong>
-      System architecture decisions, UX design, feature planning, workflow logic,
-      and product direction are my own.
-    </strong>
-  </p>
-
-  <div class="tech-stack">
-    <span>Claude Cowork</span>
-    <span>JavaScript</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>IndexedDB</span>
-    <span>Cloudflare</span>
-    <span>Supabase</span>
-  </div>
-</div>
-</div>
-
-<details class="project-details">
-  <summary>Read more about the project and development</summary>
-
-  <h2>Project Direction</h2>
-  <ul>
-    GearUp combines armory management and operational planning into one connected
-    system built around real field workflow needs — offline-first, installable on
-    phone and desktop
-    <li>Built to solve real operational and equipment-management problems within airsoft and milsim environments</li>
-    <li>Evolved from a simple inventory tracker into a broader operations and preparation platform</li>
-    <li>Focused on practical workflow, low friction, and field usability instead of feature bloat</li>
-    <li>Armory and Operations Center systems are interconnected and designed to support each other</li>
-    <li>Built intentionally without frontend frameworks — lightweight structure, no build complexity, easy long-term maintenance</li>
-  </ul>
-
-  <h2>Technical Overview</h2>
-  <ul>
-    <li><strong>Type:</strong> Progressive Web App (PWA) — installable, offline-capable, mobile-first</li>
-    <li><strong>Frontend:</strong> Vanilla JavaScript, HTML, CSS</li>
-    <li><strong>Storage:</strong> IndexedDB for local-first storage + Supabase PostgreSQL for cloud sync</li>
-    <li><strong>Authentication:</strong> Cloudflare Access protected deployment with account mapping based on authenticated email</li>
-    <li><strong>Operations Center:</strong> Briefings, objectives, ROE, notes, interactive maps, operational checklists, and field-focused planning tools</li>
-    <li><strong>Loadout System:</strong> Automated loadout generation based on season, role, and equipment condition</li>
-    <li><strong>Inventory System:</strong> Ownership tracking, lending/borrowing, maintenance intervals, ammunition tracking, and operational status management</li>
-    <li><strong>Automation:</strong> Operation-linked loadouts, automatic checklist generation, maintenance reminders, operation history logging, and usage tracking</li>
-    <li><strong>Import / Export:</strong> Excel and JSON support with duplicate detection and bulk import handling</li>
-    <li><strong>Statistics:</strong> Chart.js visualizations for gear usage, categories, conditions, and operational history</li>
-    <li><strong>Currency System:</strong> CZK / EUR support with live conversion across stored inventory values</li>
-  </ul>
-
-  <h2>Current State</h2>
-  <ul>
-    <li>Fully functional and in active personal use</li>
-    <li>Cross-device synchronization working through Supabase with automatic session handling</li>
-    <li>Offline-first architecture with local persistence and queued sync behavior</li>
-    <li>Private deployment hosted on Cloudflare Pages behind Cloudflare Access / Zero Trust protection</li>
-    <li>Currently expanding toward broader operational planning and long-term equipment lifecycle tracking</li>
-  </ul>
-</details>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project">
-      <span class="project-badge project-badge--date">February 2026</span>
-      <div class="project-inner">
-        <div class="project-image">
-          <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">
-            <img src="BohuniceBanner.jpg" alt="Bohunice: The Last Shift Screenshot">
-          </a>
-        </div>
-        <div class="project-content">
-          <h2>
-            <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Bohunice: The Last Shift</a>
-          </h2>
-          <p><strong>My own long-term solo project</strong> — active work in progress</p>
-          <p>
-            A first-person atmospheric exploration game set after a fictionalized nuclear accident at
-            the Jaslovské Bohunice power plant in 1977 Czechoslovakia, focused on tension,
-            navigation, and environmental storytelling.
-          </p>
-          <p>
-            Built independently over several months.
-            <strong>All models, textures, and level design are created by me.</strong>
-          </p>
-          <div class="tech-stack">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>Blender</span>
-            <span>GIMP</span>
-            <span>GitHub</span>
-            <span>Visual Studio</span>
-            <span>Itch.io</span>
+      <!-- Bohunice -->
+      <div class="project">
+        <span class="project-badge project-badge--date">February 2026</span>
+        <div class="project-inner">
+          <div class="project-image">
+            <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">
+              <img src="BohuniceBanner.jpg" alt="Bohunice: The Last Shift Screenshot">
+            </a>
+          </div>
+          <div class="project-content">
+            <h2>
+              <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Bohunice: The Last Shift</a>
+            </h2>
+            <p><strong>Solo long-term project</strong> — active work in progress</p>
+            <p>
+              A first-person atmospheric exploration game set after a fictionalized nuclear accident at
+              the Jaslovské Bohunice power plant in 1977 Czechoslovakia.
+              All models, textures, and level design created by me.
+            </p>
+            <div class="tech-stack">
+              <span>Unity</span>
+              <span>C#</span>
+              <span>Blender</span>
+              <span>GIMP</span>
+              <span>GitHub</span>
+              <span>Visual Studio</span>
+              <span>Itch.io</span>
+            </div>
           </div>
         </div>
+        <details class="project-details">
+          <summary>Key Features</summary>
+          <ul>
+            <li>First-person atmospheric exploration set in a fictionalized 1977 Czechoslovakia</li>
+            <li>Custom radiation exposure and anomalous hazard gameplay systems</li>
+            <li>Night environment with limited visibility and flashlight mechanic</li>
+            <li>All models, textures, and level design created from scratch</li>
+            <li>Low-poly / PSX-inspired visual style using Unity Terrain and modular props</li>
+          </ul>
+          <p><a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Live Demo (itch.io)</a></p>
+        </details>
       </div>
-      <details class="project-details">
-        <summary>Read more about the project and development</summary>
-        <h2>Project Direction</h2>
-        <ul>
-          <li>Originally planned with a much larger scope</li>
-          <li>Features deliberately cut to reach a focused, manageable experience</li>
-          <li>Now used as a playable WIP and portfolio demonstration</li>
-          <li>Emphasis on atmosphere over quantity</li>
-        </ul>
-        <h2>Technical Overview</h2>
-        <ul>
-          <li><strong>Engine:</strong> Unity 6.1</li>
-          <li><strong>Perspective:</strong> First-person</li>
-          <li><strong>Visual Style:</strong> Low-poly / PSX inspired</li>
-          <li><strong>Level Design:</strong> Unity Terrain + custom modular props</li>
-          <li>Custom gameplay systems (radiation exposure, anomalous hazards)</li>
-          <li>Night-time environment with limited visibility (flashlight feature)</li>
-          <li>Minimal HUD — information learned through the world</li>
-        </ul>
-        <h2>Current State</h2>
-        <ul>
-          <li>Playable part of the map with showcase of features for open DEMO</li>
-          <li>Atmosphere established (lighting, fog, post-processing)</li>
-          <li>Core systems implemented and under iteration</li>
-        </ul>
-      </details>
-    </div>
 
-    <!-- Project 4 -->
-    <div class="project">
-      <span class="project-badge project-badge--date">June 2025</span>
-      <div class="project-inner">
-        <div class="project-image">
-          <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">
-            <img src="RocketDodge_Banner.jpg" alt="Rocket Dodge Screenshot">
-          </a>
-        </div>
-        <div class="project-content">
-          <h2>
-            <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Rocket Dodge</a>
-          </h2>
-          <p>A precision-based physics game focused on timing, momentum, and player control.</p>
-          <p>
-            Originally created as part of a Unity course, then expanded beyond the tutorial.
-            <strong>I implemented additional systems, UI, and levels independently.</strong>
-          </p>
-          <div class="tech-stack">
-            <span>Unity</span>
-            <span>C#</span>
-            <span>Blender</span>
-            <span>GitHub</span>
-            <span>Itch.io</span>
+      <!-- Rocket Dodge -->
+      <div class="project">
+        <span class="project-badge project-badge--date">June 2025</span>
+        <div class="project-inner">
+          <div class="project-image">
+            <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">
+              <img src="RocketDodge_Banner.jpg" alt="Rocket Dodge Screenshot">
+            </a>
+          </div>
+          <div class="project-content">
+            <h2>
+              <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Rocket Dodge</a>
+            </h2>
+            <p>A precision-based physics game focused on timing, momentum, and player control.</p>
+            <p>
+              Originally created as part of a Unity course, then expanded beyond the tutorial
+              with additional systems, UI, and levels implemented independently.
+            </p>
+            <div class="tech-stack">
+              <span>Unity</span>
+              <span>C#</span>
+              <span>Blender</span>
+              <span>GitHub</span>
+              <span>Itch.io</span>
+            </div>
           </div>
         </div>
+        <details class="project-details">
+          <summary>Key Features</summary>
+          <ul>
+            <li>Physics-driven precision movement with tight, unforgiving controls</li>
+            <li>Increasing difficulty scaling across multiple levels</li>
+            <li>Main menu, level select, settings, and pause menu — added independently</li>
+            <li>Alternative W/A/D control scheme beyond the original tutorial</li>
+            <li>Death counter and custom end-game scene</li>
+          </ul>
+          <p><a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Live Demo (itch.io)</a></p>
+        </details>
       </div>
-      <details class="project-details">
-        <summary>Development details</summary>
-        <h2>Project Direction</h2>
-        <ul>
-          <li>Focus on <strong>tight, unforgiving control</strong> and small physics adjustments that affect player experience.</li>
-          <li>Increasing difficulty with each level.</li>
-          <li>Storytelling via environment and background scenery.</li>
-        </ul>
-        <h2>Technical Overview</h2>
-        <ul>
-          <li><strong>Engine:</strong> Unity 6.1</li>
-          <li><strong>Gameplay:</strong> Physics-driven movement</li>
-          <li><strong>Style:</strong> Low-poly modular environment</li>
-        </ul>
-        <h2>What Came From the Course</h2>
-        <ul>
-          <li>Basic player controller</li>
-          <li>Core assets and level structure</li>
-          <li>Initial gameplay concept</li>
-        </ul>
-        <h2>What I Added Independently</h2>
-        <ul>
-          <li>Alternative control scheme (W / A / D)</li>
-          <li>Main menu and level selection</li>
-          <li>Settings menu</li>
-          <li>Pause menu</li>
-          <li>Additional levels and difficulty scaling</li>
-          <li>Death counter and end-game scene</li>
-        </ul>
-      </details>
-    </div>
 
-    <!-- Project 5 -->
-    <div class="project">
-      <span class="project-badge project-badge--date">February 2025</span>
-      <div class="project-inner">
-        <div class="project-image">
-          <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">
-            <img src="Dice_Roll_Screen.jpeg" alt="Roll a Dice Screenshot">
-          </a>
-        </div>
-        <div class="project-content">
-          <h2>
-            <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Roll a Dice</a>
-          </h2>
-          <p>Dice rolling simulator.</p>
-          <p>
-            A small JavaScript project demonstrating basic interactivity and DOM manipulation.
-            Started from a tutorial and extended with additional functionality and UI improvements.
-          </p>
-          <div class="tech-stack">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>VS Code</span>
+      <!-- Roll a Dice -->
+      <div class="project">
+        <span class="project-badge project-badge--date">February 2025</span>
+        <div class="project-inner">
+          <div class="project-image">
+            <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">
+              <img src="Dice_Roll_Screen.jpeg" alt="Roll a Dice Screenshot">
+            </a>
+          </div>
+          <div class="project-content">
+            <h2>
+              <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Roll a Dice</a>
+            </h2>
+            <p>Dice rolling simulator.</p>
+            <p>
+              A small JavaScript project demonstrating basic interactivity and DOM manipulation.
+              Started from a tutorial and extended with additional functionality and UI improvements.
+            </p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>VS Code</span>
+            </div>
           </div>
         </div>
+        <details class="project-details">
+          <summary>Key Features</summary>
+          <ul>
+            <li>Two independent dice with separate roll histories</li>
+            <li>Roll history management with deletion support</li>
+            <li>Event-driven DOM manipulation — no frameworks</li>
+            <li>Custom responsive styling added beyond the tutorial base</li>
+          </ul>
+          <p><a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Live Demo</a></p>
+        </details>
       </div>
-      <details class="project-details">
-        <summary>Development details</summary>
-        <h2>Project Direction</h2>
-        <p>A small web project focused on JavaScript fundamentals, user interaction, and dynamic DOM updates.</p>
-        <h2>Technical Overview</h2>
-        <ul>
-          <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
-          <li>Event-driven UI updates</li>
-          <li>Dynamic DOM manipulation</li>
-        </ul>
-        <h2>What Came From the Tutorial</h2>
-        <ul>
-          <li>Single dice roll with animation</li>
-          <li>Basic result display</li>
-        </ul>
-        <h2>What I Added Independently</h2>
-        <ul>
-          <li>Second dice with independent roll history</li>
-          <li>Roll history management and deletion</li>
-          <li>Custom styling and responsive layout</li>
-        </ul>
-      </details>
+
     </div>
     <!-- Footer Section -->
     <section id="contact" class="container">

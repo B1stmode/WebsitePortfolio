@@ -212,10 +212,87 @@
         </div>
       </div>
 
-      <!--Project 1-->
+      <h3 class="projects-subheading">Hlavní projekty</h3>
 
+      <!-- STANDBY -->
       <div class="project project--featured">
-        <span class="project-badge">Nejnovější</span>
+      <span class="project-badge project-badge--date">Červen 2026</span>
+      <span class="project-badge">Nejnovější</span>
+        <div class="project-inner">
+          <div class="project-image">
+            <img src="GearUP_Banner_Fixed.png" alt="STANDBY: Your Range Tool">
+          </div>
+          <div class="project-content">
+            <h2>STANDBY: Your Range Tool</h2>
+            <p>Shot timer a tréninkový pomocník pro airsoft a střelecký trénink.</p>
+            <p>
+              Mobile-first Progressive Web App vytvořená pro použití na střelnici, během drilu,
+              v okamžiku akce — časovač, knihovna drilů a tréninkový deník v jednom offline nástroji.
+              Navrženo a vedeno mnou, implementace vytvořena pomocí AI-assisted workflowu.
+            </p>
+            <div class="tech-stack">
+              <span>Claude Code</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>IndexedDB</span>
+              <span>Cloudflare</span>
+            </div>
+          </div>
+        </div>
+        <details class="project-details">
+          <summary>Klíčové funkce</summary>
+          <ul>
+            <li>Offline-first PWA — instalovatelná na telefon i desktop, bez nutnosti účtu</li>
+            <li>Detekce výstřelů přes mikrofon — mikrofon automaticky zastaví časovač po potvrzení výstřelu</li>
+            <li>Knihovna drilů s klasikami (El Presidente, Bill Drill, Mozambique) a možností vytváření vlastních drilů</li>
+            <li>Kalibrační systém — měří okolní hluk a špičky výstřelů pro nastavení úrovně detekce</li>
+            <li>Tréninkový deník — záznamy ze střelnice v stylu zápisníku s split-times, skóre a poznámkami</li>
+            <li>Field Mode pro čitelnost při venkovním použití v přímém slunečním světle </li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- GearUp -->
+      <div class="project project--featured">
+        <span class="project-badge project-badge--date">Květen 2026</span>
+        <div class="project-inner">
+          <div class="project-image">
+            <img src="GearUP_Banner_Fixed.png" alt="Snímek aplikace GearUp">
+          </div>
+          <div class="project-content">
+            <h2>GearUp: Your Operational Readiness</h2>
+            <p>Platforma pro správu vybavení a operační přípravu pro airsoft a milsim akce.</p>
+            <p>
+              Mobile-first Progressive Web App navržená pro správu vybavení,
+              přípravu loadoutů, organizaci operací a sledování výstroje napříč zařízeními.
+              Navrženo a vedeno mnou, implementace vytvořena pomocí AI-assisted workflow.
+            </p>
+            <div class="tech-stack">
+              <span>Claude Cowork</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>IndexedDB</span>
+              <span>Cloudflare</span>
+              <span>Supabase</span>
+            </div>
+          </div>
+        </div>
+        <details class="project-details">
+          <summary>Klíčové funkce</summary>
+          <ul>
+            <li>Offline-first PWA — instalovatelná na telefon i desktop</li>
+            <li>Armory systém: vlastnictví, půjčování, intervaly údržby, sledování munice</li>
+            <li>Operations Center: briefingy, cíle, mapy, checklisty, nástroje pro terén</li>
+            <li>Automatické generování loadoutů podle sezóny, role a stavu vybavení</li>
+            <li>Synchronizace napříč zařízeními přes Supabase s lokálním IndexedDB ukládáním</li>
+          </ul>
+        </details>
+      </div>
+
+      <!-- Claude Meter -->
+      <div class="project project--featured">
         <span class="project-badge project-badge--date">Květen 2026</span>
         <div class="project-inner">
           <div class="project-image">
@@ -227,14 +304,11 @@
             <h2>
               <a href="https://github.com/B1stmode/claude-meter" target="_blank">Claude-meter: Limits at a glance</a>
             </h2>
-            <p>Claude Code Limity, vždy na očích.</p>
+            <p>Claude Code limity, vždy na očích.</p>
             <p>
-              Rozšíření pro VS Code, které zobrazuje limity využití Claude Code (5hodinová relace a týdenní)
+              Rozšíření pro VS Code, které zobrazuje limity využití Claude Code (5hodinová session a týdenní session)
               jako trvalou položku ve stavovém řádku — vždy viditelné, bez nutnosti zadávat příkazy.
-            </p>
-            <p>
               Navrženo a řízeno mnou, kód napsán s pomocí AI.
-              <strong>Všechna rozhodnutí o funkcích, přístupy a produktová vize jsou moje vlastní.</strong>
             </p>
             <div class="tech-stack">
               <span>Claude Code</span>
@@ -247,292 +321,142 @@
           </div>
         </div>
         <details class="project-details">
-          <summary>Více o projektu a vývoji</summary>
-          <h2>Záměr projektu</h2>
+          <summary>Klíčové funkce</summary>
           <ul>
-            <li>Vznikl z reálné osobní frustrace — žádný nativní způsob, jak vidět limity Claude Code přímo ve VS Code
-            </li>
-            <li>Záměrně minimalistické — jedno JS rozšíření, žádný build step</li>
+            <li>Trvalá položka ve stavovém řádku VS Code — vždy viditelná, bez příkazů</li>
+            <li>Sleduje 5hodinový i týdenní limit využití Claude Code</li>
+            <li>Barevné označení: neutrální / žlutá / červená podle procenta využití</li>
+            <li>Tooltip zobrazuje odpočty do resetu a čas posledního načtení</li>
+            <li>Žádná data se neshromažďují — jediný request na servery Anthropic přes vlastní token</li>
           </ul>
-          <h2>Technický přehled</h2>
-          <ul>
-            <li><strong>Typ:</strong> Rozšíření pro VS Code — publikováno na VS Code Marketplace</li>
-            <li><strong>Jazyk:</strong> Vanilla JavaScript, VS Code Extension API</li>
-            <li><strong>Auth:</strong> Čte OAuth přihlašovací údaje z <code>~/.claude/.credentials.json</code>
-              vygenerované Claude Code</li>
-            <li>Dotazuje <code>api.anthropic.com/api/oauth/usage</code> každých 5 minut (endpoint objevený komunitou)
-            </li>
-            <li>Barevně označený stavový řádek — šedá / žlutá / červená podle procenta využití</li>
-            <li>Tooltip při najetí zobrazuje kvóty relace i týdne, odpočty do resetu a čas posledního načtení</li>
-            <li>Žádná data se neshromažďují — pouze jeden dotaz na servery Anthropic pomocí vlastního tokenu</li>
-          </ul>
-          <h2>Aktuální stav</h2>
-          <ul>
-            <li>Dostupné na VS Code Marketplace a v aktivním osobním použití</li>
-            <li>Funguje automaticky při spuštění VS Code bez nutnosti konfigurace</li>
-            <li>Závisí na nedokumentovaném API endpointu — může přestat fungovat, pokud jej Anthropic změní</li>
-          </ul>
+          <p><a href="https://github.com/B1stmode/claude-meter" target="_blank">GitHub</a></p>
         </details>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project">
-        <span class="project-badge project-badge--date">Květen 2026</span>
-        <div class="project-inner">
-          <div class="project-image">
-            <img src="GearUP_Banner_Fixed.png" alt="Snímek aplikace GearUp">
-          </div>
-          <div class="project-content">
-            <h2>GearUp: Your Operational Readiness</h2>
+      <h3 class="projects-subheading">Ostatní projekty</h3>
+      <div class="projects-grid">
 
-            <p>
-              Platforma pro správu vybavení a operační přípravu pro airsoft a milsim akcích.
-            </p>
-
-            <p>
-              Mobile-first Progressive Web App navržená pro správu vybavení,
-              přípravu loadoutů, organizaci operací a sledování výstroje napříč zařízeními.
-            </p>
-
-            <p>
-              Navrženo a vedeno mnou, implementace vytvořena pomocí AI-assisted workflow.
-              <strong>
-                Architektura systému, UX design, plánování funkcí,
-                workflow logika a celkové směřování projektu jsou moje vlastní rozhodnutí.
-              </strong>
-            </p>
-
-            <div class="tech-stack">
-              <span>Claude Cowork</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>IndexedDB</span>
-              <span>Cloudflare</span>
-              <span>Supabase</span>
+        <!-- Bohunice -->
+        <div class="project">
+          <span class="project-badge project-badge--date">Únor 2026</span>
+          <div class="project-inner">
+            <div class="project-image">
+              <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">
+                <img src="BohuniceBanner.jpg" alt="Bohunice: The Last Shift Screenshot">
+              </a>
+            </div>
+            <div class="project-content">
+              <h2>
+                <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Bohunice: The Last Shift</a>
+              </h2>
+              <p><strong>Vlastní dlouhodobý solo projekt</strong> — aktivně rozpracovaný</p>
+              <p>
+                First-person atmosférická hra zasazená do zfiktované jaderné katastrofy
+                v Jaslovských Bohunicích v roce 1977.
+                Veškeré modely, textury a level design jsou mojí vlastní prací.
+              </p>
+              <div class="tech-stack">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Blender</span>
+                <span>GIMP</span>
+                <span>GitHub</span>
+                <span>Visual Studio</span>
+                <span>Itch.io</span>
+              </div>
             </div>
           </div>
+          <details class="project-details">
+            <summary>Klíčové funkce</summary>
+            <ul>
+              <li>First-person atmosférický průzkum zasazený do zfiktovaného Československa roku 1977</li>
+              <li>Vlastní systémy gameplay (vliv radiace, anomální jevy)</li>
+              <li>Noční prostředí s omezenou viditelností a mechanikou svítilny</li>
+              <li>Veškeré modely, textury a level design vytvořeny od nuly</li>
+              <li>Low-poly / PSX inspirovaný vizuální styl s Unity Terrain a modulárními objekty</li>
+            </ul>
+            <p><a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Live Demo (itch.io)</a></p>
+          </details>
         </div>
 
-        <details class="project-details">
-          <summary>Přečíst více o projektu a vývoji</summary>
-
-          <h2>Směr projektu</h2>
-          <ul>
-            GearUp propojuje správu výstroje a operační plánování do jednoho propojeného systému
-            postaveného kolem reálných potřeb při přípravě na akce a používání v terénu —
-            offline-first, instalovatelný na telefon i desktop
-            <li>Vytvořeno pro řešení reálných problémů se správou vybavení a operační přípravou v airsoft a milsim
-              akcích</li>
-            <li>Projekt se postupně vyvinul z jednoduchého inventory trackeru do širší platformy pro operace a přípravu
-            </li>
-            <li>Zaměřeno na praktický workflow, nízkou míru zbytečných kroků a použitelnost v terénu místo zbytečného
-              feature bloatu</li>
-            <li>Systémy Armory a Operations Center jsou vzájemně propojené a navržené tak, aby se doplňovaly</li>
-            <li>Záměrně vytvořeno bez frontend frameworků — lehká struktura, žádná build komplexita, jednodušší
-              dlouhodobá údržba</li>
-          </ul>
-
-          <h2>Technický přehled</h2>
-          <ul>
-            <li><strong>Typ:</strong> Progressive Web App (PWA) — instalovatelná, offline-capable, mobile-first</li>
-            <li><strong>Frontend:</strong> Vanilla JavaScript, HTML, CSS</li>
-            <li><strong>Úložiště:</strong> IndexedDB pro local-first ukládání + Supabase PostgreSQL pro cloud
-              synchronizaci</li>
-            <li><strong>Autentizace:</strong> Cloudflare Access chráněné nasazení s mapováním účtu podle ověřeného
-              emailu</li>
-            <li><strong>Operations Center:</strong> Briefingy, cíle, ROE, poznámky, interaktivní mapy, operační
-              checklisty a nástroje zaměřené na použití v terénu</li>
-            <li><strong>Loadout systém:</strong> Automatické generování loadoutů podle sezóny, role a stavu vybavení
-            </li>
-            <li><strong>Inventory systém:</strong> Sledování vlastnictví, půjčování vybavení, intervaly údržby,
-              sledování munice a operačního stavu vybavení</li>
-            <li><strong>Automatizace:</strong> Propojení operací s loadouty, automatické checklisty, upozornění na
-              údržbu, historie operací a tracking používání vybavení</li>
-            <li><strong>Import / Export:</strong> Podpora Excel a JSON souborů s detekcí duplicit a bulk importem</li>
-            <li><strong>Statistiky:</strong> Chart.js grafy pro využití vybavení, kategorie, stav a operační historii
-            </li>
-            <li><strong>Měnový systém:</strong> Podpora CZK / EUR s live přepočtem hodnot vybavení</li>
-          </ul>
-
-          <h2>Aktuální stav</h2>
-          <ul>
-            <li>Plně funkční a aktivně používané v osobním provozu</li>
-            <li>Cross-device synchronizace fungující přes Supabase s automatickou správou sessions</li>
-            <li>Offline-first architektura s lokálním ukládáním a queued sync chováním</li>
-            <li>Privátní nasazení hostované na Cloudflare Pages za Cloudflare Access / Zero Trust ochranou</li>
-            <li>Projekt se dále rozšiřuje směrem k širšímu operačnímu plánování a dlouhodobému lifecycle trackingu
-              vybavení</li>
-          </ul>
-        </details>
-      </div>
-      <!-- Project 3 -->
-      <div class="project">
-        <span class="project-badge project-badge--date">Únor 2026</span>
-        <div class="project-inner">
-          <div class="project-image">
-            <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">
-              <img src="BohuniceBanner.jpg" alt="Bohunice: The Last Shift Screenshot">
-            </a>
-          </div>
-          <div class="project-content">
-            <h2>
-              <a href="https://b1stmode.itch.io/bohunice-the-last-shift" target="_blank">Bohunice: The Last Shift</a>
-            </h2>
-            <p><strong>Můj vlastní dlouhodobý solo projekt</strong> — aktivně rozpracovaný</p>
-            <p>
-              First-person, atmosférická hra která se odehrává po zfiktované jaderné
-              katastrofě na území Československa v jaderné elektrárně Jaslovské Bohunice v roce 1977,
-              zaměřená na napětí, navigaci a příběh prostřednictvím prostředí kolem hráče.
-            </p>
-            <p>
-              Vytvořeno samostatně během několika měsíců.
-              <strong>Veškeré modely, textury a level design jsou mojí vlastní prací.</strong>
-            </p>
-            <div class="tech-stack">
-              <span>Unity</span>
-              <span>C#</span>
-              <span>Blender</span>
-              <span>GIMP</span>
-              <span>GitHub</span>
-              <span>Visual Studio</span>
-              <span>Itch.io</span>
+        <!-- Rocket Dodge -->
+        <div class="project">
+          <span class="project-badge project-badge--date">Červen 2025</span>
+          <div class="project-inner">
+            <div class="project-image">
+              <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">
+                <img src="RocketDodge_Banner.jpg" alt="Rocket Dodge Screenshot">
+              </a>
+            </div>
+            <div class="project-content">
+              <h2>
+                <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Rocket Dodge</a>
+              </h2>
+              <p>Hra založená na přesnosti, zaměřená na načasování, hybnost a kontrolu hráče.</p>
+              <p>
+                Původně vytvořena jako součást Unity kurzu, poté rozšířena mimo tutoriál
+                o vlastní systémy, UI a úrovně.
+              </p>
+              <div class="tech-stack">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Blender</span>
+                <span>GitHub</span>
+                <span>Itch.io</span>
+              </div>
             </div>
           </div>
+          <details class="project-details">
+            <summary>Klíčové funkce</summary>
+            <ul>
+              <li>Fyzicky řízený přesný pohyb s přísným, nekompromisním ovládáním</li>
+              <li>Postupné zvyšování obtížnosti napříč úrovněmi</li>
+              <li>Hlavní menu, výběr úrovní, nastavení a pause menu — přidáno samostatně</li>
+              <li>Alternativní ovládací schéma W/A/D nad rámec původního tutoriálu</li>
+              <li>Počítadlo úmrtí a vlastní end-game scéna</li>
+            </ul>
+            <p><a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Live Demo (itch.io)</a></p>
+          </details>
         </div>
-        <details class="project-details">
-          <summary>Více o projektu a vývoji</summary>
-          <h2>Směr projektu</h2>
-          <ul>
-            <li>Původně plánováno s mnohem širším záběrem</li>
-            <li>Hodně funkcí bylo cíleně zjednodušeno nebo odstraněno, aby byl projekt soustředěný a zvládatelný</li>
-            <li>Důraz na atmosféru.</li>
-          </ul>
-          <h2>Technický přehled</h2>
-          <ul>
-            <li><strong>Engine:</strong> Unity 6.1</li>
-            <li><strong>Pohled:</strong> First-person</li>
-            <li><strong>Vizualní styl:</strong> Low-poly / PSX inspirace</li>
-            <li><strong>Level design:</strong> Unity Terrain + vlastní modulární objekty</li>
-            <li>Vlastní gameplay systémy (vliv radiace, anomální vliv)</li>
-            <li>Noční prostředí s omezenou viditelností (funkce svítilny)</li>
-            <li>Minimalistické HUD — informace se získávají průzkumem světa</li>
-          </ul>
-          <h2>Současný stav</h2>
-          <ul>
-            <li>Hratelný úsek s různými ukázkami</li>
-            <li>Nastavená atmosféra (osvětlení, mlha, post-processing)</li>
-            <li>Základní systémy implementovány a laděny</li>
-          </ul>
-        </details>
-      </div>
 
-      <!-- Project 4 -->
-      <div class="project">
-        <span class="project-badge project-badge--date">Červen 2025</span>
-        <div class="project-inner">
-          <div class="project-image">
-            <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">
-              <img src="RocketDodge_Banner.jpg" alt="Rocket Dodge Screenshot">
-            </a>
-          </div>
-          <div class="project-content">
-            <h2>
-              <a href="https://b1stmode.itch.io/rocket-dodge-gamedevtv-course-project" target="_blank">Rocket Dodge</a>
-            </h2>
-            <p>Hra založená na přesnosti, zaměřená na načasování, hybnost a kontrolu hráče.</p>
-            <p>
-              Původně vytvořena jako součást Unity kurzu, později rozšířena mimo tutoriál.
-              <strong>Samostatně jsem přidal další systémy, UI a úrovně.</strong>
-            </p>
-            <div class="tech-stack">
-              <span>Unity</span>
-              <span>C#</span>
-              <span>Blender</span>
-              <span>GitHub</span>
-              <span>Itch.io</span>
+        <!-- Roll a Dice -->
+        <div class="project">
+          <span class="project-badge project-badge--date">Únor 2025</span>
+          <div class="project-inner">
+            <div class="project-image">
+              <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">
+                <img src="Dice_Roll_Screen.jpeg" alt="Roll a Dice Screenshot">
+              </a>
+            </div>
+            <div class="project-content">
+              <h2>
+                <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Roll a Dice</a>
+              </h2>
+              <p>Simulátor hodu kostkami.</p>
+              <p>
+                Malý JavaScript projekt demonstrující základní interaktivitu a DOM manipulaci.
+                Projekt začal z tutoriálu a byl rozšířen o další funkce a zlepšení UI.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>VS Code</span>
+              </div>
             </div>
           </div>
+          <details class="project-details">
+            <summary>Klíčové funkce</summary>
+            <ul>
+              <li>Dvě nezávislé kostky s oddělenou historií hodů</li>
+              <li>Správa historie hodů s možností smazání</li>
+              <li>Event-driven manipulace s DOM — bez frameworků</li>
+              <li>Vlastní responzivní styling přidaný nad rámec tutoriálu</li>
+            </ul>
+            <p><a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Live Demo</a></p>
+          </details>
         </div>
-        <details class="project-details">
-          <summary>Detaily vývoje</summary>
-          <h2>Směr projektu</h2>
-          <ul>
-            <li>Důraz na <strong>přesné, nekompromisní ovládání</strong> které ovlivňuje zážitek hráče.</li>
-            <li>Postupné zvyšování obtížnosti s každou úrovní.</li>
-            <li>Příběh vyprávěný prostředím a scenérií pozadí.</li>
-          </ul>
-          <h2>Technický přehled</h2>
-          <ul>
-            <li><strong>Engine:</strong> Unity 6.1</li>
-            <li><strong>Gameplay:</strong> Pohyb založený na fyzice</li>
-            <li><strong>Styl:</strong> Low-poly modulární prostředí</li>
-          </ul>
-          <h2>Co bylo z kurzu</h2>
-          <ul>
-            <li>Základní player controller</li>
-            <li>Hlavní assety a struktura úrovní</li>
-            <li>Počáteční herní koncept</li>
-          </ul>
-          <h2>Co jsem přidal samostatně</h2>
-          <ul>
-            <li>Alternativní ovládání (W / A / D)</li>
-            <li>Hlavní menu a výběr úrovní</li>
-            <li>Nastavení a pause menu</li>
-            <li>Další úrovně a škálování obtížnosti</li>
-            <li>Počet úmrtí a end-game scéna</li>
-          </ul>
-        </details>
-      </div>
 
-      <!-- Project 5 -->
-      <div class="project">
-        <span class="project-badge project-badge--date">Únor 2025</span>
-        <div class="project-inner">
-          <div class="project-image">
-            <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">
-              <img src="Dice_Roll_Screen.jpeg" alt="Roll a Dice Screenshot">
-            </a>
-          </div>
-          <div class="project-content">
-            <h2>
-              <a href="https://b1stmode.github.io/Roll-A-Dice_Project/" target="_blank">Roll a Dice</a>
-            </h2>
-            <p>Simulator hodu kostkami.</p>
-            <p>
-              Malý JavaScript projekt který simuluje hod kostkami.
-              Projekt začal z tutoriálu a byl rozšířen o další funkce a zlepšení UI.
-            </p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>VS Code</span>
-            </div>
-          </div>
-        </div>
-        <details class="project-details">
-          <summary>Detaily vývoje</summary>
-          <h2>Směr projektu</h2>
-          <p>Malý webový projekt zaměřený na základy JavaScriptu, interakci s uživatelem a dynamické aktualizace DOM.
-          </p>
-          <h2>Technický přehled</h2>
-          <ul>
-            <li><strong>Jazyky:</strong> HTML, CSS, JavaScript</li>
-            <li>Event-driven aktualizace UI</li>
-          </ul>
-          <h2>Co bylo z tutoriálu</h2>
-          <ul>
-            <li>Jedna kostka s animací při hodu.</li>
-            <li>Základní zobrazení výsledků.</li>
-          </ul>
-          <h2>Co jsem přidal samostatně</h2>
-          <ul>
-            <li>Druhou kostku s nezávislou historií hodů</li>
-            <li>Správa historie hodů a možnost smazání</li>
-            <li>Vlastní styling a responzivní rozvržení</li>
-          </ul>
-        </details>
       </div>
 
     </section>

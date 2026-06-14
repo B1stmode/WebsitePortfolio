@@ -682,6 +682,39 @@ img:hover {
   border-color: rgba(170, 170, 170, 0.2);
 }
 
+.projects-subheading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  margin-top: 48px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.projects-grid .project {
+  margin-bottom: 0;
+}
+
+.projects-grid .project-inner {
+  flex-direction: column;
+}
+
+.projects-grid .project-image {
+  max-width: 100%;
+  flex: none;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .project-inner {
     flex-direction: column;
@@ -690,6 +723,9 @@ img:hover {
     flex: none;
     max-width: 100%;
     width: 100%;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 
